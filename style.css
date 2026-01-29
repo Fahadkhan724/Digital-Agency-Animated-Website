@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-PP: "PP Editorial New",sans-serif;
+  --font-BT: "BDO Grotesk", sans-serif;
+  --hovoer-color: #ff6c3b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+.nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #5454545d;
+  background-color: transparent;
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: navbar 2s ease-out 0.4s forwards;
+}
+
+.middle-nav {
+  flex: 0.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middle-nav a {
+  text-decoration: none;
+  font-family: var(--font-BT);
+  font-size: 16px;
+  color: white;
+  transition: all ease-in 0.2s;
+}
+
+.middle-nav a:hover {
+  color: var(--hovoer-color);
+}
+
+.middle-nav a i:hover{
+    transform: rotate(180deg);
+    color: white;
+}
+
+.button {
+  font-family: var(--font-BT);
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: none;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: white;
+  transition:
+    color 0.3s ease,
+    background-color 0.4s ease;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  z-index: -1;
+  transition: height 0.5s ease;
+  background-color: var(--hovoer-color);
+}
+
+.button:hover::before {
+  cursor: pointer;
+  height: 100%;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+@keyframes navbar {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  padding: 100px 60px 15px;
+  overflow: hidden;
+}
+
+.hero-text h1 {
+  color: white;
+  font-size: 110px;
+  text-align: center;
+  font-family: var(--font-BT);
+  line-height: 1;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: reveal 2s ease 0.4s forwards;
+}
+
+.hero-text h1 span {
+  font-family: var(--font-PP);
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0;
+  animation: reveal 1s ease 0.4s forwards;
+}
+
+@keyframes reveal {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-text h1:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.hero-text h1:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.hero-text h1:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.hero-text h1 span {
+  animation-delay: 1.1s;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 14px;
+}
+
+.btn {
+  font-size: 18px;
+  font-family: var(--font-BT);
+  padding: 20px 22px;
+  border-radius: 40px;
+  border: none;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--hovoer-color);
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeleft 2s ease-out 0.4s forwards;
+  transition:
+    color 0.5s ease,
+    background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  z-index: -1;
+  transition: height 0.8s ease;
+  background-color: white;
+}
+
+.btn:hover::before {
+  height: 100%;
+}
+
+.btn:hover {
+  color: black;
+}
+.btn:hover i {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+@keyframes fadeleft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.button-div p {
+  color: #999999;
+  font-size: 16px;
+  font-family: var(--font-BT);
+  width: 20%;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeRight 1s ease-out 0.4s forwards;
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* .hero-text h1:nth-child(1) {
+    animation-delay: 0.10s;
+}
+.hero-text h1:nth-child(2) {
+        animation-delay: 0.15s;
+
+}
+.hero-text h1:nth-child(3) {
+       animation-delay: 0.16s;
+
+} */
