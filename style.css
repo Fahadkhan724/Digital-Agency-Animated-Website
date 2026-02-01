@@ -864,7 +864,7 @@ html {
   margin: 0;
   padding: 0;
   line-height: 0.9;
-  letter-spacing: -0.48px;
+  letter-spacing: -2px;
 }
 
 .four-text h3,
@@ -955,8 +955,151 @@ margin-bottom: 50px;
 }
 
 .sec-showcase {
-  margin-top: 25px;
+  margin-top: 20px;
  animation: move 25s linear infinite reverse;
 }
 
+/* section 5 started  */
+
+.s5 {
+  background-color: #1c1c1c;
+  padding: 8rem 8%;
+}
+
+.s5-box {
+    width: fit-content;
+    /* padding: 2rem 4%; */
+}
+
+.box-left {
+    display: flex;
+    align-items: center;
+    background-color:#121212;
+    justify-content: center;
+     padding: 15px 29px;
+    border-radius: 18px;
+    gap: 10px;
+    width: fit-content;
+}
+
+.box-left img {
+  width: 80%;
+}
+
+.box-left,.box-left cite{
+      font-size: 18px;
+    line-height: 1.33;
+    position: relative;
+    color: white;
+    font-family: var(--font-BT);
+    letter-spacing: -0.03em;
+}
+
+.s5-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.s5-sec-left {
+}
+
+.s5-sec-left h2{
+font-size: 80px;
+font-family: var(--font-BT);
+color: white;
+line-height: 0.9;
+font-weight: 500;
+letter-spacing: -3px;
+}
+
+
+.s5-sec-left p {
+  margin-top: 24px;
+  font-size: 18px;
+  font-family: var(--font-BT);
+  color: #999999;
+  width: 90%;
+}
+
+
+.s5-sec-right {
+width: 100%;
+position: relative;
+}
+
+.s5-sec-right img {
+  width: 100%;
+}
+
+.s5-sec-right img:nth-child(2) {
+  width: 20%;
+  position: absolute;
+  top: 33%;
+right: 30%;
+    animation: imgleft both;
+    animation-timeline: view(40% 20%);
+}
+
+@keyframes imgleft {
+  to {
+    transform: translateX(-70px);
+  }
+}
+
+.s5-sec-right img:nth-child(3) {
+  width: 30%;
+  position: absolute;
+  top: 15%;
+  right: 75%;
+  transform: translateY(0);
+     animation: imgbottom both;
+    animation-timeline: view(70% 30%);
+}
+
+@keyframes imgbottom {
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+.s5-icon-container {
+  margin-top: 180px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons-divs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+ }
+
+.icon-div span{
+  background-color: #202020;
+  border-radius: 20px;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons-divs p {
+  font-size: 16px;
+  font-family: var(--font-BT);
+  color: white;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+
+.s5-line {
+  margin-top: 140px;
+  border-bottom: 1px solid #2e2e2e;
+}
+
+/* end of section 5 */
 
