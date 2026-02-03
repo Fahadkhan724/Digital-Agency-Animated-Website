@@ -18,6 +18,16 @@ html {
   scroll-behavior: smooth;
 }
 
+
+@keyframes fadeUpScroll {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 .header {
   background-color: #121212;
   /* min-height: 100vh ; */
@@ -474,9 +484,6 @@ html {
   border-radius: 30px;
   letter-spacing: -0.48px;
 }
-.outer-container {
-  margin-top: 80px;
-}
 
 .images-container {
   display: flex;
@@ -695,7 +702,7 @@ html {
   opacity: 0;
   /* opacity: 1; */
   transform: translateY(20px);
-  /* animation: reveal 1s ease 0.2s forwards ; */
+  animation: reveal 1s ease 0.2s forwards ;
   animation: textreveal 1s ease-out forwards;
 }
 
@@ -763,10 +770,11 @@ html {
   font-family: var(--font-BT);
   color: #111111;
   width: 50%;
-  font-size: 30px;
   font-weight: 500;
   line-height: 30px;
   letter-spacing: -1.5px;
+    transform: translateY(40px);
+  animation: fadeUpScroll 1s ease-out forwards;
 }
 
 .gsap-para p span {
@@ -846,6 +854,10 @@ html {
   width: 45%;
 }
 
+/* section 3 finished  */
+
+/* section 4 started  */
+
 .four {
   background-color: #f5f5f5;
   padding-bottom: 5%;
@@ -866,6 +878,9 @@ html {
   padding: 0;
   line-height: 0.9;
   letter-spacing: -2px;
+    transform: translateY(40px);
+  animation: fadeUpScroll 1s ease-out forwards;
+  color: #111111;
 }
 
 .four-text h3,
@@ -875,8 +890,11 @@ html {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  color: #111111;
   line-height: 0.9;
   letter-spacing: -4px;
+    transform: translateY(40px);
+  animation: fadeUpScroll 1s ease-out forwards;
 }
 
 .s4-sec {
@@ -959,6 +977,8 @@ margin-bottom: 50px;
   margin-top: 20px;
  animation: move 25s linear infinite reverse;
 }
+/* section 4  finish  */
+
 
 /* section 5 started  */
 
@@ -1146,6 +1166,7 @@ letter-spacing: -3px;
   flex: 1;
   padding: 2rem 1.4rem 0 2rem;
   border-radius: 30px;
+  max-width: 500px;
 }
 
 .top-left {
@@ -1194,10 +1215,6 @@ letter-spacing: -3px;
   
 }
 
-.middle-top-left-img img {
-  width: 70%;
-  margin: 0 auto;
-}
 
 .middle-top-left h5{
   color: rgba(255, 255, 255, 0.45);
@@ -1207,6 +1224,11 @@ letter-spacing: -3px;
   line-height: 0.9;
   padding-bottom:  100px;
   text-align: left;
+}
+
+.middle-top-left-img img {
+  width: 70%;
+  margin: 0 auto;
 }
 
 .middle-top-left h5 span {
@@ -1273,7 +1295,6 @@ padding-bottom: 60px;
 
 /* .section  7 start  */
 .s7 {
-  min-height: 100vh;
   background-color: #1c1c1c;
 }
 .s7-top-text {
@@ -1430,7 +1451,7 @@ position: relative;
 
 .s8 {
   background-color: #f5f5f5;
-  min-height: 80vh;
+  /* min-height: 80vh; */
 }
 
 .s8-top-item {
@@ -1617,3 +1638,4 @@ details p {
   font-family: var(--font-BT);
   color: white;
 }
+/* section 8 responsivceness finish  */
